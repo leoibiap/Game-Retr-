@@ -1,0 +1,227 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: rgba(223, 221, 221, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.birthday-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3e892d; 
+    color: rgb(238, 231, 231); 
+    padding: 6px 1px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold; 
+    font-size: 12px;
+}
+
+.birthday-banner p {
+    margin: 0;
+    padding: 0;
+}
+
+.image-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cta-button {
+    position: absolute;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-color: #3e892d;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px #218838, 0 8px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    text-decoration: none;
+    transform: translateX(-50%);
+    padding: 7px 28px;
+}
+
+.cta-button span {
+    margin-left:26px; 
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 54%;
+    transform: translateY(-50%);
+    width: 30px; 
+    height: 30px; 
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-button::after {
+    content: '';
+    position: absolute;
+    left: 16px; 
+    top: calc(30% + 4px); 
+    border-width: 12px; 
+    border-style: solid;
+    border-color: transparent transparent transparent transparent;
+    transform: rotate(180deg); 
+    border-bottom-color: #3e892d;
+}
+
+.cta-button:hover {
+    background-color: #1e7e34;
+    box-shadow: 0 2px #19692c, 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px); 
+}
+
+.cta-button:active{
+    background-color: #004494;
+}
+
+.btn-pulse {
+    animation: pulse 0.7s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(.9); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(.9); }
+}
+
+.pos1 {
+    top: 98%; /* Ajuste conforme necessário */
+    left: 15%; /* Ajuste conforme necessário */
+}
+
+.pos2 {
+    top: 99%; /* Ajuste conforme necessário */
+    left: 15%; /* Ajuste conforme necessário */
+}
+
+.pos3 {
+    top: 95%; /* Ajuste conforme necessário */
+    left: 10%; /* Ajuste conforme necessário */
+}
+
+.pos6 {
+    position: absolute;
+    top: 67%; /* Ajuste conforme necessário */
+    left: 15%; /* Ajuste conforme necessário */
+}
+
+.pos7 {
+    position: absolute;
+    bottom: 66%; /* Ajuste conforme necessário */
+    left: 15%; /* Ajuste conforme necessário */
+}
+
+.pos8 {
+    position: absolute;
+    bottom: 0.4%; /* Ajuste conforme necessário */
+    left: 15%; /* Ajuste conforme necessário */
+}
+
+
+.video-container {
+    position: absolute;
+    top: 31%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+    width: 85%;
+    max-width: 580px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 200px;
+}
+
+@media(max-width:768px){
+    .landing-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-section{
+        width: 80%;
+        margin-bottom: 35px;
+    }
+    .cta-button{
+        position: absolute;
+        font-size: 7vw;
+        padding: 6px 28px;
+        }
+}
+
+@media(max-width: 480px){
+    .image-section{
+        width: 80%;
+    }
+    .cta-button {
+        position: absolute;
+        font-size: 6vw;
+        padding: 6px 28px;
+}
+}
+
+.site-footer {
+    background-color: rgba(223, 221, 221, 1)#333;
+    color: rgb(97, 96, 96);
+    padding: 100px 0;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: -140px;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 10px 0;
+}
+
+.footer-content a {
+    color: #e1b91a;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
